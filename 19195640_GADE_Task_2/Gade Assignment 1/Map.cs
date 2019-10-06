@@ -23,6 +23,8 @@ namespace Gade_Assignment_1
 
         public Random r = new Random();
 
+        GameEngine gameengine = new GameEngine();
+
         public Map(int numberofunits, int numberofbuildings)
         {
             map1 = new string[20, 20];
@@ -57,7 +59,6 @@ namespace Gade_Assignment_1
         int T2_resource_building_amount = 2;
         int T2_factory_building_amount = 2;
 
-
         public void UnitGeneration()
         {
             int randomXposition;
@@ -67,36 +68,7 @@ namespace Gade_Assignment_1
             {
                 randomXposition = r.Next(1, 19);
                 randomYposition = r.Next(1, 19);
-                //bool positionfound=false;
-                //while (positionfound == false)
-                //{
-                //    foreach (MeleeUnit m in meleeUnits)
-                //    {
-                //        if (randomXposition == m.XPos && randomYposition == m.YPos)
-                //        {
-                //            randomXposition = r.Next(1, 19);
-                //            randomYposition = r.Next(1, 19);
-                //            positionfound = false;
-                //        }//recheck logic
-                //        else if(positionfound != false)
-                //        {
-                //            positionfound = true;
-                //        }
-                //    }
-                //    foreach (RangedUnit R in rangedUnits)
-                //    {
-                //        if (randomXposition == R.XPos && randomYposition == R.YPos)
-                //        {
-                //            randomXposition = r.Next(1, 19);
-                //            randomYposition = r.Next(1, 19);
-                //            positionfound = false;
-                //        }
-                //        else
-                //        {
-                //            positionfound = true;
-                //        }
-                //    }
-                //}
+               
                 MeleeUnit M = new MeleeUnit(randomXposition, randomYposition, 50, 10, 1, 1, "o/*", false,"Warrior");
                 meleeUnits.Add(M);
                 units.Add(M);
@@ -110,6 +82,23 @@ namespace Gade_Assignment_1
                 rangedUnits.Add(R);
                 units.Add(R);
             }
+
+            foreach (Building b in buildings)
+            {
+                if (b is FactoryBuilding)
+                {
+                    FactoryBuilding f = (FactoryBuilding)b;
+                    if (f.production_speed % gameengine.RoundsCompleted ==  0)
+                    {
+                        units.Add(f.UnitSpawner());
+                    }
+                }
+                if (b is ResourceBuilding)
+                {
+                    ResourceBuilding rs = (ResourceBuilding)b;
+                    rs.ResourceGeneration();
+                }
+            }
         }
         public void BuildingGeneration()
         {
@@ -121,23 +110,7 @@ namespace Gade_Assignment_1
             {
                 randomXposition = r.Next(1, 19);
                 randomYposition = r.Next(1, 19);
-                //bool positionfound = false;
-                //while (positionfound == false)
-                //{
-                //    foreach (ResourceBuilding rb in resource_buildings)
-                //    {
-                //        if (randomXposition == rb.XPos && randomYposition == rb.YPos)
-                //        {
-                //            randomXposition = r.Next(1, 19);
-                //            randomYposition = r.Next(1, 19);
-                //            positionfound = false;
-                //        }
-                //        else if (positionfound != false)
-                //        {
-                //            positionfound = true;
-                //        }
-                //    }
-                //}
+               
                 ResourceBuilding RB = new ResourceBuilding(randomXposition, randomYposition, 100, 1, "[*]");
                 resource_buildings.Add(RB);
                 buildings.Add(RB);
@@ -147,23 +120,7 @@ namespace Gade_Assignment_1
             {
                 randomXposition = r.Next(1, 19);
                 randomYposition = r.Next(1, 19);
-                //bool positionfound = false;
-                //while (positionfound == false)
-                //{
-                //    foreach (ResourceBuilding rb in resource_buildings)
-                //    {
-                //        if (randomXposition == rb.XPos && randomYposition == rb.YPos)
-                //        {
-                //            randomXposition = r.Next(1, 19);
-                //            randomYposition = r.Next(1, 19);
-                //            positionfound = false;
-                //        }
-                //        else if (positionfound != false)
-                //        {
-                //            positionfound = true;
-                //        }
-                //    }
-                //}
+               
                 ResourceBuilding RB = new ResourceBuilding(randomXposition, randomYposition, 100, 2, "[+]");
                 resource_buildings.Add(RB);
                 buildings.Add(RB);
@@ -173,23 +130,7 @@ namespace Gade_Assignment_1
             {
                 randomXposition = r.Next(1, 19);
                 randomYposition = r.Next(1, 19);
-                //bool positionfound = false;
-                //while (positionfound == false)
-                //{
-                //    foreach (FactoryBuilding fb in factory_buildings)
-                //    {
-                //        if (randomXposition == fb.XPos && randomYposition == fb.YPos)
-                //        {
-                //            randomXposition = r.Next(1, 19);
-                //            randomYposition = r.Next(1, 19);
-                //            positionfound = false;
-                //        }
-                //        else if (positionfound != false)
-                //        {
-                //            positionfound = true;
-                //        }
-                //    }
-                //}
+               
                 FactoryBuilding FB = new FactoryBuilding(randomXposition, randomYposition, 100,1,"[+]");
                 factory_buildings.Add(FB);
                 buildings.Add(FB);
@@ -329,9 +270,6 @@ namespace Gade_Assignment_1
             //}
 
         }
-        public void Read()
-        {
 
-        }
     }
 }

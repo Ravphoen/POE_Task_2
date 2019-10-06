@@ -22,6 +22,10 @@ namespace Gade_Assignment_1
             this.attacking = aattacking;
             this.unit_name = uunit_name;
         }
+
+        public BattleForm bf;
+        public Map m;
+
         //properties 
         public int XPos
         {
@@ -269,10 +273,6 @@ namespace Gade_Assignment_1
                 + ".\nUnit Symbol:" + symbol 
                 + ".\nAttacking status:" + attacking;
         }
-
-        public BattleForm bf;
-        public Map m;
-
         public override void Save()
         {
             StreamWriter savestream;

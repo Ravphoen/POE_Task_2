@@ -130,13 +130,6 @@ namespace Gade_Assignment_1
         public Map m;
         BattleForm bf = new BattleForm();
 
-        public override void Save()
-        {
-            StreamWriter savestream;
-            savestream = File.CreateText("c:ResourceBuildingInfo.txt");
-            savestream.WriteLine(bf.Text = m.get_resource_building_info());
-            savestream.Close();
-            bf.Text = ("Created File!");
-        }
+       
     }
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Gade_Assignment_1
 {
@@ -19,7 +21,6 @@ namespace Gade_Assignment_1
         public Map map;
 
         private int roundscompleted;
-
         public int RoundsCompleted
         {
             get { return roundscompleted;}          
@@ -154,6 +155,30 @@ namespace Gade_Assignment_1
         public Map.Direction Movecloser()
         {
             return Map.Direction.West;
+        }
+        public void Save()
+        {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            FileStream fileStream = new FileStream("MapInfo.dat", FileMode.Create, FileAccess.Write, FileShare.None);
+
+            using (fileStream)
+            {
+                binaryFormatter.Serialize(fileStream, map);
+
+                MessageBox.Show("Game Saved");
+            }
+        }
+        public void Read()
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream fileStream = new FileStream("MapInfo.dat", FileMode.Open, FileAccess.Read, FileShare.None);
+
+            using (fileStream)
+            {
+                map = (Map)formatter.Deserialize(fileStream);
+
+                MessageBox.Show("Game Loaded");
+            }
         }
     }
 }

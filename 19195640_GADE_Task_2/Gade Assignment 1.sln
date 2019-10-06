@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gade Assignment 1", "Gade Assignment 1\Gade Assignment 1.csproj", "{319CF46D-DC33-466F-BE67-1668F505450B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POE_Task_2", "Gade Assignment 1\POE_Task_2.csproj", "{319CF46D-DC33-466F-BE67-1668F505450B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

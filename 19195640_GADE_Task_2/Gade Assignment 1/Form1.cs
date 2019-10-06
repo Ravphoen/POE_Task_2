@@ -57,58 +57,12 @@ namespace Gade_Assignment_1
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-            BinaryFormatter BF = new BinaryFormatter();
-            FileStream FS = new FileStream("MapInfo.dat", FileMode.Open, FileAccess.Read, FileShare.None);
-
-            try
-            {
-                using (FS)
-                {
-                    BF.Serialize(FS, map);
-                    gameengine.Updateunit();
-                    gameengine.Updatebuilding();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            //StreamWriter savestream;
-            //savestream = File.CreateText("c:AllBattlInfo.txt");
-            //savestream.WriteLine(textDisplayBox.Text = gameengine.Updateunit());
-            //savestream.Close();
-            //Console.WriteLine("Created File!");
-
+            gameengine.Save();  
         }
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            //String line;
-            //try
-            //{
-            //    StreamReader sr = new StreamReader("C:AllBattleInfo.txt");   
-                
-            //    //reading first line
-            //    line = sr.ReadLine();
-
-            //    //continuing reading until end of file
-            //    while (line != null)
-            //    {
-            //        textDisplayBox.Text=line;
-            //        //Readng following line until there are no more lines to read
-            //        line = sr.ReadLine();
-            //    }
-
-            //    //close the file
-            //    sr.Close();
-
-            //}
-            //catch (Exception E)
-            //{
-            //    textDisplayBox.Text = (E.Message);
-            //}
+            gameengine.Read();
         }
 
         private void MapTextBox_TextChanged(object sender, EventArgs e)

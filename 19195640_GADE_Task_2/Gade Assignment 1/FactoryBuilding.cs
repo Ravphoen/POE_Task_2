@@ -105,41 +105,48 @@ namespace Gade_Assignment_1
         public override string ToString()
         {
             string info = "";
-            info += "Factory Building";
-            if (Unit_type == 0)
+            info += "Building Info:";
+            info += "Factory Building:";
+            info += "Building position :(" + b_xpos + "," + b_ypos + ")";
+            info += (destroyed ? " This building is destroyed" : " This building is fully operational");
+            if (b_team == 1)
             {
                 info += "Producing Melee Units";
             }
-            else
+            if(b_team == 2)
             {
                 info += "Producing Ranged Units";
             }
-            info += "{" + base.symbol + "}";
-            info += "(" + xpos + "," + ypos + ")";
-            info += (IsDead ? " This building is destroyed" : " This building is fully operational");
+            info += "Building type: Factory Building"
+            + "\nBuilding Health: " + b_health
+            + ".\nBuilding Max Health:" + b_max_health
+            + ".\nBuilding team" + b_team
+            + ".\nBuilding Symbol:" + b_symbol;
             return info;
         }
 
         public BattleForm bf;
         public Map m;
-
-
-        public override void Save()
-        {
-
-            //StreamWriter savestream;
-            //savestream = File.CreateText("c:FactoryBuildingInfo.txt");
-            //savestream.WriteLine(bf.Text = m.get_factory_building_info());
-            //savestream.Close();
-            //bf.Text = ("Created File!");
-        }
-        //
+                       
         public Map map;
         Random r = new Random();
 
-        public void UnitSpawner()
+        public Unit UnitSpawner()
         {
-
+           
+            Unit unit;
+            if (b_team == 1)
+            {
+                MeleeUnit m = new MeleeUnit(b_xpos, b_ypos + 1, 50, 7, 1, 1, "M",false, "Warrior");
+                unit = m;
+            }
+            else
+            {
+                RangedUnit ru = new RangedUnit(b_xpos, b_ypos + 1, 20, 10, 5,2, "R",false,"Archer");
+                unit = ru;
+            }
+            
+            return unit;
         }
     }
 }

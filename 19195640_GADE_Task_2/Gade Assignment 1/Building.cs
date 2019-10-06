@@ -16,7 +16,7 @@ namespace Gade_Assignment_1
         protected string b_symbol;
 
         public abstract void Death(List<Building>buildings);
-        public abstract void Save();
+        
 
         //public override string ToString()
         //{
