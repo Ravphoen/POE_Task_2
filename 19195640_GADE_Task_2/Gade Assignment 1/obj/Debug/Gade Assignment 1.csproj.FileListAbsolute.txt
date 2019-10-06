@@ -1,0 +1,20 @@
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\bin\Debug\Gade Assignment 1.exe.config
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\bin\Debug\Gade Assignment 1.exe
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\bin\Debug\Gade Assignment 1.pdb
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\obj\Debug\Gade Assignment 1.csprojAssemblyReference.cache
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\obj\Debug\Gade_Assignment_1.BattleForm.resources
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\obj\Debug\Gade_Assignment_1.Properties.Resources.resources
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\obj\Debug\Gade Assignment 1.csproj.GenerateResource.cache
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\obj\Debug\Gade Assignment 1.csproj.CoreCompileInputs.cache
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\obj\Debug\Gade Assignment 1.exe
+C:\Users\jessi\source\repos\Gade Assignment 1\Gade Assignment 1\obj\Debug\Gade Assignment 1.pdb
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\obj\Debug\Gade Assignment 1.csprojAssemblyReference.cache
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\obj\Debug\Gade_Assignment_1.BattleForm.resources
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\obj\Debug\Gade_Assignment_1.Properties.Resources.resources
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\obj\Debug\Gade Assignment 1.csproj.GenerateResource.cache
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\obj\Debug\Gade Assignment 1.csproj.CoreCompileInputs.cache
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\obj\Debug\Gade Assignment 1.exe
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\obj\Debug\Gade Assignment 1.pdb
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\bin\Debug\Gade Assignment 1.exe.config
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\bin\Debug\Gade Assignment 1.exe
+C:\Users\jessi\source\repos\GADESEM2TASK2\Gade Assignment 1\bin\Debug\Gade Assignment 1.pdb
